@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func formatNumberToDecimal(value:Double) -> String {
         let numberFormatter = NumberFormatter()
 
-        // Atribuindo o locale desejado
+        // Atribuindo o locale 
         numberFormatter.locale = Locale(identifier: "pt_BR")
 
         // Importante para que sejam exibidas as duas casas após a vírgula
