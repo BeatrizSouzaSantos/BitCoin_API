@@ -83,6 +83,8 @@
 			dependencies = (
 			);
 			name = BitcoinCurrency;
+			packageProductDependencies = (
+			);
 			productName = BitcoinCurrency;
 			productReference = 0432370A2654536B002CC28E /* BitcoinCurrency.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +112,8 @@
 				Base,
 			);
 			mainGroup = 043237012654536A002CC28E;
+			packageReferences = (
+			);
 			productRefGroup = 0432370B2654536B002CC28E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

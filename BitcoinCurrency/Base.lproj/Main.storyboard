@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,52 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BitcoinCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPW-hi-Rqw">
+                                <rect key="frame" x="0.0" y="504.5" width="414" height="249.5"/>
+                            </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_Asset_1160_3329016" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-Sg-XPt">
+                                <rect key="frame" x="67" y="64" width="280" height="362"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-8x-jFD">
+                                <rect key="frame" x="0.0" y="436" width="414" height="43.5"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.61568627450980395" blue="0.1443620106432984" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yPW-hi-Rqw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8KG-7q-C2p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yPW-hi-Rqw" secondAttribute="bottom" constant="108" id="90z-5y-Sj1"/>
+                            <constraint firstItem="f5z-Sg-XPt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ezk-9o-Cr4"/>
+                            <constraint firstItem="aQP-8x-jFD" firstAttribute="top" secondItem="f5z-Sg-XPt" secondAttribute="bottom" constant="10" id="FDI-d1-Ngr"/>
+                            <constraint firstItem="f5z-Sg-XPt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="I3y-9O-j3v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aQP-8x-jFD" secondAttribute="trailing" id="ItQ-AX-h3r"/>
+                            <constraint firstItem="yPW-hi-Rqw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WT9-8h-xqi"/>
+                            <constraint firstItem="yPW-hi-Rqw" firstAttribute="top" secondItem="aQP-8x-jFD" secondAttribute="bottom" constant="25" id="lUe-LL-pzS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5z-Sg-XPt" secondAttribute="trailing" constant="67" id="pfQ-1O-ijq"/>
+                            <constraint firstItem="aQP-8x-jFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pwr-d0-Ipw"/>
+                            <constraint firstItem="aQP-8x-jFD" firstAttribute="top" secondItem="f5z-Sg-XPt" secondAttribute="bottom" constant="10" id="usr-RM-dme"/>
+                            <constraint firstItem="yPW-hi-Rqw" firstAttribute="top" secondItem="aQP-8x-jFD" secondAttribute="bottom" constant="25" id="xbX-aL-2EQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PriceLabelView" destination="aQP-8x-jFD" id="LZy-T0-jEH"/>
+                        <outlet property="currencyPickerView" destination="yPW-hi-Rqw" id="hJ5-mq-Tve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-584.05797101449275" y="46.875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconfinder_Asset_1160_3329016" width="512" height="362"/>
+    </resources>
 </document>
